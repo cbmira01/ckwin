@@ -4,6 +4,7 @@
 
 /* ckcmai.c - Main program for C-Kermit plus some miscellaneous functions */
 
+#include <windows.h>
 /*
   ckcsym.h is used for for defining symbols that normally would be defined
   using -D or -d on the cc command line, for use with compilers that don't

@@ -393,7 +393,10 @@ main( int argc, char * argv[] ) {
           if ( ports[i].asocket,ports[i].k95cmd )
               printf("Starting IKSD with socket %d and command %s\n",ports[i].asocket,ports[i].k95cmd);
           else 
-              printf("Starting IKSD with socket %d\n");
+			  // TODO cm, did this work in previous compiler versions?
+              // printf("Starting IKSD with socket %d\n");
+		      printf("Starting IKSD with socket %d\n",ports[i].asocket);
+
          hProcess = StartKermit(ports[i].asocket,ports[i].k95cmd, ports[i].showcmd) ;
 	 if ( hProcess != INVALID_HANDLE_VALUE )
 	     CloseHandle(hProcess);

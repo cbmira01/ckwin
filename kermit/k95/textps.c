@@ -927,7 +927,8 @@ main(argc, argv) int argc; char *argv[]; {
     }
 #ifdef OS2NTDOS
 #ifdef NT
-    if (_isatty(stdin->_file))
+	// TODO cm, do this call properly!
+	//if (_isatty(stdin->_file))
 #else
 	if (isatty(fileno(stdin)))
 #endif /* NT */

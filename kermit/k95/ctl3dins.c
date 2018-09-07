@@ -8,6 +8,7 @@
 
 /* Installs CTL3D32.DLL and MSVCRT.DLL into the proper directory */
 
+#include <stdio.h>
 #include <windows.h>
 
 void

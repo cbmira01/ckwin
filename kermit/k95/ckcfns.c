@@ -15,6 +15,8 @@ char *nm[] =  { "Disabled", "Local only", "Remote only", "Enabled" };
     All rights reserved.  See the C-Kermit COPYING.TXT file or the
     copyright text in the ckcmai.c module for disclaimer and permissions.
 */
+
+#include <windows.h>
 /*
  System-dependent primitives defined in:
 
