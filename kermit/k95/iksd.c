@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> // TODO cm, use ifdef for proper target
 
 #ifdef NT
 #include <windows.h>

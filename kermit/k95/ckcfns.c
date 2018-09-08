@@ -16,7 +16,7 @@ char *nm[] =  { "Disabled", "Local only", "Remote only", "Enabled" };
     copyright text in the ckcmai.c module for disclaimer and permissions.
 */
 
-#include <windows.h>
+#include <windows.h> // TODO cm, use ifdef for proper target
 /*
  System-dependent primitives defined in:
 

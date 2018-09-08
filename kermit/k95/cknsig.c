@@ -7,7 +7,7 @@
   Copyright (C) 1985, 2004, Trustees of Columbia University in the City of New
   York.  All rights reserved.
 */
-#include <windows.h>
+#include <windows.h> // TODO cm, use ifdef for proper target
 
 #include "ckcsym.h"
 #include "ckcasc.h"                     /* ASCII character symbols */

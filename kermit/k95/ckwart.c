@@ -1,3 +1,4 @@
+#include <windows.h>  // TODO cm, use ifdef for proper target
 #include "ckcsym.h"
 char *wartv = "Wart Version 2.14, 10 Nov 1999";
 
