@@ -18,6 +18,11 @@ COMPILER = OpenWatcom C/C++ CL clone
 MSC_VER = 130
 COMPILER_VERSION = Visual C++ 7.0 compatbile
 
+!ELSEIF ([cl 2>&1 | findstr /C:"Version 19" > nul] == 0)
+# Visual C++ 12.0 (Visual Studio 2013)
+MSC_VER = 190
+COMPILER_VERSION = 14.0 (Visual Studio 2017)
+
 !ELSEIF ([cl 2>&1 | findstr /C:"Version 18.0" > nul] == 0)
 # Visual C++ 12.0 (Visual Studio 2013)
 MSC_VER = 180
