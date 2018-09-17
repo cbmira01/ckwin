@@ -930,7 +930,7 @@ char * ftp_apw = NULL;			/* Anonymous password */
 
 #define sig_t my_sig_t
 #define sigtype SIGTYP
-typedef sigtype (*sig_t)();
+typedef sigtype (*sig_t)(int);
 
 /* Static global variables */
 
@@ -1998,7 +1998,7 @@ static char rfnbuf[RFNBUFSIZ];          /* Remote filename translate buffer */
 static char * xgnbp = NULL;
 
 static int
-strgetc() {                             /* Helper function for xgnbyte() */
+strgetc(void) {                             /* Helper function for xgnbyte() */
     int c;
     if (!xgnbp)
       return(-1);
@@ -12187,7 +12187,7 @@ cancelrecv(sig) int sig; {
 /* Argumentless front-end for secure_getc() */
 
 static int
-netgetc() {
+netgetc(void) {
     return(secure_getc(globaldin,0));
 }
 
