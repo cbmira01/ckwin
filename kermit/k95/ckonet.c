@@ -5459,7 +5459,7 @@ SOCKS_read_config( void )
             char msg[1024];
             if (userlist)
                 sprintf(msg,"%s %s 0x%08x 0x%08x %s %u",
-                         *argv, userlist, daddr.s_addr, dmask,
+                         *argv, userlist, daddr.s_addr, dmask.s_addr,
                          tst == e_eq ? "==" :
                          tst == e_neq ? "!=" :
                          tst == e_lt ? "<" :
@@ -5469,7 +5469,7 @@ SOCKS_read_config( void )
                          dport);
             else
                 sprintf(msg,"%s 0x%08x 0x%08x %s %u",
-                         *argv, daddr.s_addr, dmask,
+                         *argv, daddr.s_addr, dmask.s_addr,
                          tst == e_eq ? "==" :
                          tst == e_neq ? "!=" :
                          tst == e_lt ? "<" :
