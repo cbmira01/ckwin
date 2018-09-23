@@ -7721,7 +7721,7 @@ StreamSize(char * filename, char * streamname)
                 UnicodeToANSI(wszStreamName,stream,sizeof(stream));
                 debug(F110,"StreamSize ntfs stream found",stream,0);
                 if (!_wcsicmp(wszStreamName,wszStat)) {
-                    size = (sid.Size.HighPart << 32) + sid.Size.LowPart;
+                    size = ((unsigned long long)sid.Size.HighPart << 32) + sid.Size.LowPart;
                     break;
                 }
             }
