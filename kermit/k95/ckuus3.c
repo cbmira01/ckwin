@@ -4306,7 +4306,7 @@ dosexp(s) char *s; {                    /* s = S-Expression */
 #endif	/* FNFLOAT */
 	    } else {
 		fpresult /= fpj;
-		result = fpj;
+		result = (__int64)fpj;
 #ifdef FNFLOAT
 		  fpflag++;
 #endif	/* FNFLOAT */
@@ -4516,8 +4516,8 @@ dosexp(s) char *s; {                    /* s = S-Expression */
 
           case SX_FLO:                  /* Float */
             fpflag++;
-            fpresult = result;
-            fpj = j;
+            fpresult = (double)result;
+            fpj = (double)j;
             break;
 
           case SX_NOT:                  /* NOT (reverse truth value) */

@@ -9321,7 +9321,7 @@ docmd(cx) int cx; {
 		x = cmresult.nresult;
 #ifdef CKFLOAT
 		if (inscale != 1.0)	/* Scale */
-		  x *= inscale;		
+		  x *= (int)inscale;		
 #endif	/* CKFLOAT */
 		havetime++;
 		break;

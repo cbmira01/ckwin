@@ -6916,7 +6916,7 @@ shocps(pct, fsiz, howfar) int pct; CK_OFF_T fsiz, howfar;
     }
 #else  /* Not GFTIMER */
     if ((secs = gtv - fsecs) > 0) {
-        cps = (secs < 1L) ? ffc : ffc / secs;
+        cps = (long)(secs < 1L) ? ffc : ffc / secs;
         move(CW_CP,22);
 #ifdef KUI
 #ifndef K95G
