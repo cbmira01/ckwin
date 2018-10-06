@@ -8853,7 +8853,7 @@ static char * pcvtbufin = NULL;
 static char * pcvtbufout = NULL;
 
 static int				/* Input function xgnbyte() */
-cvtfnin() {
+cvtfnin(void) {
     CHAR c;
     c = *pcvtbufin++;
     return(c ? c : -1);
