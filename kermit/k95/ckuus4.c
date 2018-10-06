@@ -10390,14 +10390,14 @@ fneval(fn,argp,argn,xp) char *fn, *argp[]; int argn; char * xp; {
 	  a_ptr[x][4] = NULL;
 	  makestr(&(a_ptr[x][4]),s);
 	  ckstrncpy(workbuf,s,32);	/* Save for later */
-#endif /* CK_PERMS */
+
 
 	  /* Element 5 - Permissions numeric code */
 
 	  s = zgperm(bp[0]);
 	  a_ptr[x][5] = NULL;
 	  makestr(&(a_ptr[x][5]),s);
-
+#endif /* CK_PERMS */
 	  /* Element 6 - Size in bytes */
       
 #ifdef OS2 /* [jt] 2013/11/21 - K-95 doesn't have linkname */
