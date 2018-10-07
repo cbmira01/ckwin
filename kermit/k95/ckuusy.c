@@ -507,11 +507,7 @@ fatal2(msg1,msg2) char *msg1, *msg2; {
 }
 
 static SIGTYP
-#ifdef CK_ANSI
 cl_int(int dummy)
-#else /* CK_ANSI */
-cl_int(dummy) int dummy;
-#endif /* CK_ANSI */
 {					/* Command-line interrupt handler */
     doexit(BAD_EXIT,1);
     SIGRETURN;

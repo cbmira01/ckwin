@@ -11413,7 +11413,7 @@ empty(mask, cnt, sec) int * mask, sec;
 #endif /* BSDSELECT */
 
 static sigtype
-cancelsend(sig) int sig; {
+cancelsend(int sig) {
     havesigint++;
     cancelgroup++;
     cancelfile = 0;
@@ -12164,7 +12164,7 @@ sendrequest(cmd, local, remote, xlate, incs, outcs, restart)
 }
 
 static sigtype
-cancelrecv(sig) int sig; {
+cancelrecv(int sig) {
     havesigint++;
     cancelfile = 0;
     cancelgroup++;
