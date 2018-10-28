@@ -11957,7 +11957,7 @@ line25(int vmode) {
 
 char*
 chstr(int c) {
-    char s[8];
+    static char s[8];
     char *cp = s;
 
     if (c < SP || c == DEL)
