@@ -3349,7 +3349,7 @@ conect(int async) {
     if ( !async )
         isconnect();
     else
-        _beginthread(isconnect,
+        _beginthread((void(__cdecl*)(void*))isconnect,
 #ifdef OS2ONLY
                       0,
 #endif /* OS2ONLY */
