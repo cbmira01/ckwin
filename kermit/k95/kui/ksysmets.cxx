@@ -8,6 +8,11 @@ KSysMetrics::KSysMetrics()
 
     OSVERSIONINFO verinfo;
     verinfo.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+
+    // TODO cm: GetVersionEx API has been deprecated in VS2013
+    // https://github.com/Downstream/ds_cinder/issues/3
+    // Some other way to get OS version needs to be implemented
+    #pragma warning(disable: 4996)
     GetVersionEx( &verinfo );
 
     switch( verinfo.dwPlatformId )
