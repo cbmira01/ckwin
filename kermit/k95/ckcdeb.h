@@ -1624,7 +1624,7 @@ typedef unsigned char CHAR;
 #ifdef CHAR
 #undef CHAR
 #endif /* CHAR */
-typedef unsigned char CHAR;
+// typedef unsigned char CHAR;
 #endif /* VMS */
 #endif /* OS2 */
 #endif /* HPUX */
@@ -5982,7 +5982,7 @@ extern int _flsbuf(char c,FILE *stream);
 #ifdef SIZE_T_MALLOC
 _PROTOTYP( void * malloc, (size_t) );
 #else
-_PROTOTYP( char * malloc, (unsigned int) );
+_PROTOTYP( void * malloc, (unsigned int) );
 #endif /* SIZE_T_MALLOC */
 
 _PROTOTYP( char * getenv, (char *) );
