@@ -221,13 +221,13 @@ msvcd:
     CC2="" \
     OUT="-Fe" O=".obj" \
 	OPT="" \
-    DEBUG="/Zi /Odi /Ge " \
+    DEBUG="/Zi /Odi " \
     DLL="" \
-	CFLAGS=" $(COMMON_CFLAGS) /GF /GZ /J /DWIN32 /D_WIN32_WINNT=0x0400 /D_CONSOLE /D__32BIT__ /D_USE_32BIT_TIME_T /W2 /F65536" \
+	CFLAGS=" $(COMMON_CFLAGS) /GF /RTC1 /J /DWIN32 /D_WIN32_WINNT=0x0400 /D_CONSOLE /D__32BIT__ /D_USE_32BIT_TIME_T /W2 /F65536" \
     LDFLAGS="" \
     PLATFORM="NT" \
     NOLINK="/c" \
-    LINKFLAGS="/nologo /SUBSYSTEM:console /MAP /DEBUG:full /WARN:3 /FIXED:NO /PROFILE /OPT:REF" \
+    LINKFLAGS="/nologo /SUBSYSTEM:console /MAP /DEBUG:full /FIXED:NO /PROFILE /OPT:REF" \
 	DEF="cknker.def"
 
 # debug version
@@ -237,13 +237,13 @@ msvcd-iksd:
     CC2="" \
     OUT="-Fe" O=".obj" \
 	OPT="" \
-    DEBUG="/Zi /Odi /Ge " \
+    DEBUG="/Zi /Odi " \
     DLL="" \
-	CFLAGS=" $(COMMON_CFLAGS) /GF /GZ /J /DWIN32 /D_WIN32_WINNT=0x0400 /D_CONSOLE /D__32BIT__ /D_USE_32BIT_TIME_T /W2 /F65536" \
+	CFLAGS=" $(COMMON_CFLAGS) /GF /RTC1 /J /DWIN32 /D_WIN32_WINNT=0x0400 /D_CONSOLE /D__32BIT__ /D_USE_32BIT_TIME_T /W2 /F65536" \
     LDFLAGS="" \
     PLATFORM="NT" \
     NOLINK="/c" \
-    LINKFLAGS="/nologo /SUBSYSTEM:console /MAP /DEBUG:full /WARN:3 /FIXED:NO /PROFILE /OPT:REF" \
+    LINKFLAGS="/nologo /SUBSYSTEM:console /MAP /DEBUG:full /FIXED:NO /PROFILE /OPT:REF" \
 	DEF="cknker.def"
 
 # memory debug version
@@ -253,13 +253,13 @@ msvcmd:
     CC2="" \
     OUT="-Fe" O=".obj" \
 	OPT="" \
-    DEBUG="/Zi /Odi /Ge -Dmalloc=dmalloc -Dfree=dfree -DMDEBUG" \
+    DEBUG="/Zi /Odi -Dmalloc=dmalloc -Dfree=dfree -DMDEBUG" \
     DLL="" \
 	CFLAGS=" $(COMMON_CFLAGS) /J /DWIN32 /D_WIN32_WINNT=0x0400 /D_CONSOLE /D__32BIT__ /D_USE_32BIT_TIME_T /W2 /F65536" \
     LDFLAGS="" \
     PLATFORM="NT" \
     NOLINK="/c" \
-    LINKFLAGS="/nologo /SUBSYSTEM:console /MAP /DEBUG:full /WARN:3 /FIXED:NO /PROFILE" \
+    LINKFLAGS="/nologo /SUBSYSTEM:console /MAP /DEBUG:full /FIXED:NO /PROFILE" \
 	DEF="cknker.def"
 
 # profile version
